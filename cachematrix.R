@@ -5,12 +5,16 @@
 ## getter setter for the cachcing the matrix
 makeCacheMatrix <- function(x = matrix()) {
         o_Inv <- NULL
+		#setter method that will set the value being passed
         set <- function(y) {
                 x <<- y
                 o_Inv <<- NULL
         }
+		# the getter function tht will return the value of the object
         get <- function() x
+		# sets that inverse of the matrix
         fnsetinverse <- function(oInv) o_Inv <<- oInv
+		# gets the inverse of the matrix
         fngetinverse <- function() o_Inv
         list(set = set, get = get,
              fnsetinverse = fnsetinverse,
